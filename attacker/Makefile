@@ -18,7 +18,7 @@ login:
 	@${DOCKER} login ${DOCKER_REPO} ${CRED} || echo "continue"
 
 build:
-	${DOCKER} build -t ${APP_NAME} . --file ./docker/gnuradio.Dockerfile
+	${DOCKER} build -t ${APP_NAME} .
 
 xserver-dev:
 	xhost + # give foward auth

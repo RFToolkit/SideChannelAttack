@@ -1,7 +1,7 @@
 FINWARE_NAME=node-master
 
 compile:
-	avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -c -o ${FINWARE_NAME}.o ${FINWARE_NAME}.cpp
+	avr-gcc -Os -DF_CPU=16000000UL -mmcu=atmega328p -I"./DRIVERS/RF24" -I"./DRIVERS/NRFLite/src" -c -o ${FINWARE_NAME}.o ${FINWARE_NAME}.cpp
 
 generate:
 	avr-gcc -mmcu=atmega328p ${FINWARE_NAME}.o -o ${FINWARE_NAME}

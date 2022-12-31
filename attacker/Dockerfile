@@ -17,3 +17,7 @@ RUN apt-get update && \
 
 RUN apt update &&\
     apt install -y gnuradio python3-packaging
+
+COPY ./install.sh /usr/bin/install.sh
+RUN chmod +x /usr/bin/install.sh
+RUN /usr/bin/install.sh
